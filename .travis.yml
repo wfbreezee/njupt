@@ -1,2 +1,9 @@
 language: c
-script: gcc test.c -o test.o
+dist: bionic
+sudo: required
+install:
+  - sudo apt update
+ 
+script: 
+  - gcc hello.c -o hello -lcurl
+  - ./hello
